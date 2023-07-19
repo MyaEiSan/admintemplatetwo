@@ -11,6 +11,79 @@ body{
 	font-size: 13px;
 	background-color: #f4f4f4;
 }
+
+
+/*Start Right Navbar*/
+
+.right-panels{
+	width: 200px;
+	height: 80vh;
+	background-color: #f4f4f4;
+
+	position: absolute;
+	top: 70px;
+	right: 0;
+
+	box-shadow: -5px 3px 10px rgba(0,0,0,0.5);
+	padding: 10px;
+
+	z-index: 200;
+
+	display: none;
+}
+
+body.show-nav > .right-panels{
+	display: block;
+}
+
+.right-panels h6{
+	background-color: steelblue;
+	color: #fff;
+	padding: 10px;
+}
+
+.right-panels .themecolors{
+	column-count: 5;
+	column-gap: 7px;
+}
+
+/*End Right Navbar*/
+
+/*Start Site Setting*/
+.sitesettings{
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	padding: 10px;
+
+	position: fixed;
+	right: 10px;
+	bottom: 50px;
+
+	opacity: .7;
+
+	z-index: 100;
+}
+
+.seitesettings .sitesettings-item:hover{
+	opacity: 1;
+}
+
+.ani-rotates{
+	animation-name: myanirotate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes myanirotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+/*End Site Setting*/
 a{
 	text-decoration: none;
 }
@@ -52,6 +125,28 @@ a{
 .currents{
 	background-color: #333;
 	box-shadow: 1px 0 5px #222;
+}
+
+.close-btns{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	outline: none;
+
+	padding: 3px;
+
+	display: none;
+}
+
+@media(max-width: 768px) {
+	.close-btns{
+		display: inline-block;
+	}
 }
 /*End Navbar*/
 
@@ -118,3 +213,5 @@ a{
 }
 
 /*End Shortcut Area*/
+
+/*14FN*/
